@@ -3,11 +3,13 @@ import { Form, FormControl, FormLabel } from "react-bootstrap";
 import _ from "lodash";
 
 const DropDownInput = (props) => {
-  const errorsArr = _.get(props.errors, props.name);
+  const errorsArr = _.get(props.errors, props.name, "");
 
   return (
-    <div className="form-group">
-      <FormLabel className={props.className}>{props.title}</FormLabel>
+    <div className='form-group'>
+      <FormLabel className={props.className} htmlFor={props.name}>
+        {props.title}
+      </FormLabel>
 
       <FormControl
         isInvalid={props.errors && errorsArr}

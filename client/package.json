@@ -9,6 +9,7 @@
     "@toast-ui/react-grid": "^4.21.1",
     "@types/react-transition-group": "^4.4.0",
     "bootstrap": "^4.4.1",
+    "dotenv": "^17.4.2",
     "env-cmd": "^10.1.0",
     "fetch-intercept": "^2.4.0",
     "jquery": "^1.9.1",

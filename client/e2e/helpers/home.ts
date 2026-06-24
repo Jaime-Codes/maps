@@ -1,15 +1,6 @@
 //Move to helper files
 import { expect, Page } from "@playwright/test";
 
-export const validateNavBarLinks = async (page: Page) => {
-  await expect(page.getByRole("link", { name: "Home" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Add" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Search" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Return" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Login" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Chicommons" })).toBeVisible();
-};
-
 export const verifyWelcomeModalAndClose = async (page: Page) => {
   await expect(page.getByText("Welcome!")).toBeVisible();
   await expect(page.getByRole("dialog")).toMatchAriaSnapshot(`
